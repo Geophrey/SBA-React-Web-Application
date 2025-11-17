@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Login from "./components/Login";
-import { getNewDeck, shuffleDeck } from "./functions/API_Requests";
+import { getCards, getNewDeck, shuffleDeck } from "./functions/API_Requests";
 // import { handleClick } from "./functions/button_Functions";
 import GameStage from "./components/GameStage";
 
@@ -10,7 +10,8 @@ let apiURL = "https://deckofcardsapi.com/api/deck/new/";
 
 function App() {
     const [userInfo, setUserInfo] = useState({ username: "", password: "" });
-    const [deck, setNewDeck] = useState()
+    const [deck, setNewDeck] = useState({})
+    const [cards, setCards] = useState({})
 
     async function handleNewDeck() {
       // console.log(await getNewDeck())
@@ -25,8 +26,14 @@ function App() {
       setNewDeck(await shuffleDeck(deck))
     }
 
+    async function handleGetCards() {
+      console.log(cards)
+      setCards(await getCards(deck))
+    }
+
     function handleTest() {
       console.log(deck)
+      console.log(cards)
     }
 
     // useEffect(() => {
@@ -36,9 +43,10 @@ function App() {
     return (
         <>
             <GameStage />
-            <Login UI={userInfo} setUI={setUserInfo} />
+            {/* <Login UI={userInfo} setUI={setUserInfo} /> */}
             <button onClick={handleNewDeck}>Get A Deck!</button>
-            <button onClick={handleShuffle}>Shuffle Your Deck</button>
+            <button onClick={handleShuffle}>Shuffle Your Deck!</button>
+            <button onClick={handleGetCards}>Get Cards!</button>
             <button onClick={handleTest}>Test Something!</button>
         </>
     );
