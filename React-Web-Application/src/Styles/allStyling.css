@@ -15,6 +15,28 @@ body {
     width: 700px;
     align-self: center;
 }
+/* Card styling */
+.card {
+    margin: 2px;
+    border: 2px solid black;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.card p {
+    margin: 4px 4px;
+    font-weight: bold;
+}
+
+.card img {
+    width: 75px;
+    height: 100px;
+    align-self: center;
+}
 
 .introduction {
     display: flex;

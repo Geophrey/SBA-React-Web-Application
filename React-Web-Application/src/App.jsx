@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, createContext, useEffect } from "react";
 import Login from "./components/Login";
 import { getCards, getNewDeck, shuffleDeck } from "./functions/API_Requests";
 // import { handleClick } from "./functions/button_Functions";
@@ -7,6 +7,8 @@ import GameStage from "./components/GameStage";
 // import './App.css'
 
 let apiURL = "https://deckofcardsapi.com/api/deck/new/";
+
+export let cardData = createContext()
 
 function App() {
     const [userInfo, setUserInfo] = useState({ username: "", password: "" });
@@ -41,7 +43,9 @@ function App() {
     // }, [])
 
     return (
+      <cardData.Provider value={cards}>
         <>
+            {/* <GameStage cards={cards}/> */}
             <GameStage />
             {/* <Login UI={userInfo} setUI={setUserInfo} /> */}
             <button onClick={handleNewDeck}>Get A Deck!</button>
@@ -49,6 +53,7 @@ function App() {
             <button onClick={handleGetCards}>Get Cards!</button>
             <button onClick={handleTest}>Test Something!</button>
         </>
+         </cardData.Provider>
     );
 }
 
