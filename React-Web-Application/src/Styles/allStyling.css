@@ -1,0 +1,106 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(#006466, #4d194d);
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.mainSect {
+    border: 2px solid black;
+    height: 500px;
+    width: 700px;
+    align-self: center;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+}
+
+.gamePlayStage {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* height:fit-content */
+}
+
+h3 {
+    width: fit-content;
+    align-self: center;
+    text-align: center;
+}
+
+#mysteryWord {
+    width: fit-content;
+    align-self: center;
+    text-align: center;
+    font-size: 50px;
+}
+
+.insideIntroElements {
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#availableEmojis {
+    display:flex;
+    width: fit-content;
+    align-self: center;
+    text-align: center;
+    font-size: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* justify-content: space-between; */
+    /* flex-direction: row; */
+}
+
+#emojiGroup{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+[id2 = "icon"]{
+    font-size: 20px;
+}
+
+#buttonStuff {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15%;
+    width: fit-content;
+    justify-content: center;
+}
+
+#mainUserInput {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+    width: fit-content;
+    align-self: center;
+    justify-content: center;
+}
+
+.gameplayStuff {
+    width: fit-content;
+    align-self: center;
+}
+
+/* label{
+    display: flex;
+    flex-direction: column;
+} */
+
+button {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    width: 150px;
+    height: 25px;
+    justify-self: center;
+}
