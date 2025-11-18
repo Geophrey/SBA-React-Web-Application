@@ -10,7 +10,7 @@ Description: A deck of 52 cards (from ace to king) are shuffled on the game stag
 
 &nbsp;	-deck list (maybe an state array or tracked by the api)
 
-&nbsp;	-game stage
+&nbsp;	-game stage (4 rows, 13 columns)
 
 &nbsp;	-card flipping functionality (visible before shuffling or pre-shuffled, hidden after shuffling, toggle visibility when player clicks a card which, hidden when selected cards are wrong)
 
